@@ -154,28 +154,6 @@
             border: 1px dashed var(--border);
         }
 
-        .pagination {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .pagination a,
-        .pagination span {
-            padding: 0.5rem 1rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            text-decoration: none;
-            color: var(--text-main);
-        }
-
-        .pagination .active {
-            background: var(--primary);
-            border-color: var(--primary);
-        }
-
         .alert {
             padding: 1rem;
             border-radius: 8px;
@@ -227,8 +205,8 @@
             @endforelse
         </main>
 
-        <div class="pagination">
-            {{ $products->links() }}
+        <div class="pagination-container">
+            {{ $products->links('vendor.pagination.custom') }}
         </div>
     </div>
 </body>
